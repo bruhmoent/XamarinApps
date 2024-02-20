@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Wyp.MainPage"
+             BackgroundColor="AliceBlue"
+>
+
+    <StackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" HorizontalTextAlignment="Center" TextColor="CadetBlue" FontSize="20" VerticalTextAlignment="Center" HeightRequest="100">Wypożyczalnia filmów dla dzieci</Label>
+        </Grid>
+
+        <StackLayout WidthRequest="300" HorizontalOptions="CenterAndExpand">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Image Grid.Column="0" Grid.Row="0" Source="epoka.png" Aspect="AspectFill"></Image>
+                <Image Grid.Column="1" Grid.Row="0" Source="shrek.png" Aspect="AspectFill"></Image>
+
+                <Image Grid.Column="0" Grid.Row="1" Source="sing.png" Aspect="AspectFill"></Image>
+                <Image Grid.Column="1" Grid.Row="1" Source="kraina.png" Aspect="AspectFill"></Image>
+
+            </Grid>
+        </StackLayout>
+
+        <StackLayout HeightRequest="40" Orientation="Horizontal" HorizontalOptions="Center" Margin="5">
+            <Label FontSize="15" TextColor="CadetBlue" VerticalTextAlignment="Center">Ilość dni: </Label>
+            <Entry WidthRequest="40" TextColor="Black" PlaceholderColor="Black" HeightRequest="40" IsVisible="True" HorizontalTextAlignment="Center" x:Name="dni" ></Entry>
+        </StackLayout>
+
+
+        <Button BackgroundColor="CadetBlue" Clicked="Button_Clicked" TextColor="White" Text="Oblicz"></Button>
+        <Label x:Name="wynik" TextColor="CadetBlue" FontSize="20" HorizontalTextAlignment="Center" VerticalTextAlignment="Center">Do zapłaty: </Label>
+    </StackLayout>
+
+</ContentPage>
