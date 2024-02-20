@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.MainPage">
+
+    <StackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Column="0"
+               BackgroundColor="AliceBlue"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+                   FontSize="20"
+               TextColor="Black"
+               Text="Moja pierwsza aplikacja"/>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Orientation="Vertical" Grid.Column="0">
+            <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Label VerticalOptions="CenterAndExpand"  HorizontalOptions="Center" TextColor="White">a =</Label>
+                    <Entry VerticalOptions="CenterAndExpand" x:Name="a" WidthRequest="64" HeightRequest="64" BackgroundColor="BurlyWood"></Entry>
+            </StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Label VerticalOptions="CenterAndExpand"  HorizontalOptions="Center" TextColor="White">b =</Label>
+                    <Entry VerticalOptions="CenterAndExpand" x:Name="b" WidthRequest="64" HeightRequest="64" BackgroundColor="BurlyWood"></Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                    <Label VerticalOptions="CenterAndExpand"  HorizontalOptions="Center" TextColor="White">c =</Label>
+                    <Entry VerticalOptions="CenterAndExpand" x:Name="c" WidthRequest="64" HeightRequest="64" BackgroundColor="BurlyWood"></Entry>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" x:Name="oblicz" Text="Oblicz" BackgroundColor="Beige" Clicked="oblicz_Clicked" TextColor="Black" VerticalOptions="CenterAndExpand"></Button>
+        </Grid>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0"> Wynik to: </Label>
+            <Label Grid.Column="1" x:Name="Wynik"></Label>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
