@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage"
+             BackgroundColor="LightGreen">
+
+    <StackLayout>
+        <StackLayout Orientation="Vertical">
+            <Label FontSize="20" BackgroundColor="SeaGreen" Padding="10">Wizyta u weterynarza</Label>
+        </StackLayout>
+
+        <Entry x:Name="ImieNazw" Placeholder="Imie i nazwisko własciciela"></Entry>
+
+        <Label x:Name="t">Gatunek</Label>
+
+        <StackLayout HeightRequest="150" Orientation="Vertical">
+           <ListView ItemSelected="listView1_ItemSelected" x:Name="listView1"></ListView>
+        </StackLayout>
+
+        <StackLayout HeightRequest="50" Orientation="Horizontal">
+            <Label HeightRequest="50" VerticalOptions="Center" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand">Ile ma lat?</Label>
+            <Label HeightRequest="50" VerticalTextAlignment="Center" x:Name="value"></Label>
+            <Slider x:Name="Wiek" HeightRequest="50" HorizontalOptions="CenterAndExpand" WidthRequest="250" Maximum="20" Minimum="0" ValueChanged="Slider_ValueChanged"></Slider>
+        </StackLayout>
+
+        <Entry Placeholder="Cel wizity" x:Name="CelWizity"></Entry>
+        <Entry Placeholder="16:00" x:Name="Czas"></Entry>
+
+        <Button Clicked="Button_Clicked" Text="Ok"></Button>
+    </StackLayout>
+
+</ContentPage>
